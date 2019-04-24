@@ -1,83 +1,76 @@
-# VacationTracker Web Application
+# BreweryDB
 
-## Introduction
+## Introduction 
 
-This is a Web application for managing the vacation dates of employees as a 
-self-service. The backend uses the Flask micro framework for Python based on 
-Werkzeug and Jinja 2. The frontend uses the Bootstrap 4 CSS and JavaScript
-framework and is based on the SB Admin Bootstrap admin template. For the 
-database SQLite3 is used.
-
-  * Flask: http://flask.pocoo.org/
-  * Bootstrap: https://getbootstrap.com/
-  * SB Admin: https://startbootstrap.com/template-overviews/sb-admin
+This is a Web application for listing the beers and checking its details. The backend uses the ExpressJs framework. The frontend uses Reactjs, Bootstrap, CSS and JavaScript
+framework.
+* [ReactJs](https://reactjs.org/)
+* [Bootstrap](https://getbootstrap.com/)
 
 ## Requirements
 
 This Web application requires the following software:
 
-  * python3: Python interpreter version 3
-  * python3-pip: Python module installer PIP
-  * python3-venv: Python virtual environment
-  * sqlite3: SQLite version 3 for the database export
+* [Create-react-app](https://github.com/facebook/create-react-app) 
+* [NodeJs](https://nodejs.org/en/)
+* [Bootstrap](https://getbootstrap.com/)
+* [FontAwesome](https://fontawesome.com/how-to-use/on-the-web/using-with/react)
+* [ExpressJs](https://expressjs.com/)
+
+### Installing
 
 Install this software as usual. Here is an example of installing it on Ubuntu.
-
-  sudo apt-get install python3 python3-pip python3-venv sqlite3
-
+```
+sudo apt-get install Create-react-app
+```
 ## Project Structure
 
-The project follows and extends the folder structure as expected by Flask.
+The project follows and extends the folder structure as expected by React.
+
 ```
-  VacationTracker
-  |-- LicenseManagement.py     # Main application file.
-  |-- LicenseManagement.wsgi   # WSGI wrapper for Apache.
-  |-- apache2-vhost.conf     # Apache virtual host configuration.
-  |-- requirements.txt       # Python dependencies.
-  |-- dev/                   # Custom binaries.
-      |-- cleanup              # Cleanup the project.
-      |-- debug_env            # Change to debugging environment.
-      |-- prod_env             # Change to production environment.
-      |-- setup                # Setup the project.
-  |-- templates/             # HTML page templates supporting Jinja2.
-      |-- base.html            # Base template for all pages except login.html.
-      |-- licensedetails.html  # complete overview of licenses page.
-      |-- login.html           # Login page.
-      |-- overview.html        # License display page extending base.html.
-  |-- static/                # Static page content.
-      |-- css/                 # Custom CSS files.
-      |-- js/                  # Custom JavaScript files.
-      |-- images/              # Images and icons.
-      |-- vendor/              # CSS and JavaScript frameworks.
-  |-- venv/                  # Virtual Python environment.
+Brewery-app
+  |-- public                 # Python dependencies.
+  |-- react-backend          # backend of the application
+      |-- routes             # custom routes to handle backend calls.
+            |-- index.js     # custom routes to handle requests and responses of API
+            |-- users.js     # custom routes to handle request and responses of API.
+  |-- src/                   
+      |-- components         # Custom components.
+      		|-- Details.js   # Custom reactjs component.
+            |-- Details.css  # Custom css for Details component.
+      		|-- Listing.js   # Custom reactjs component.
+            |-- Listing.css  # Custom css for Listing Component.
+      		|-- main         # Custom routes of the application.
+      |-- img                # Image files of the application.   
+      |-- app.js             # Main application file.
+      |-- app.css            # Pre-defined CSS of the application.
+      |-- index.js           
+      |-- index.css 
+      |-- package.json       # Lists all packages installed or dependent.         
+
 ```
 
 ## Development and Debugging
 
-The application can be developed using just a text editor, or using the PyCharm
-IDE or any other Python IDE supporting Flask. 
+The application can be developed using just a text editor, Sublime text editor or any other IDE supporting ReactJs.
+Setup the project by executing npm start from the project directory.
 
-Setup the project by executing bin/setup from the project directory.
+For the back-end.
 
-  cd LicenseManagement
-  chmod a+x bin/*
-  dev/setup
+```
+cd brewery-app/react-backend
+npm start
+```
 
-This is required only once to create the virtual environment, install Flask and 
-its dependencies into the virtual environment, and to initialize the database. 
+For the front-end.
 
-ATTENTION: If the database already exists, it will be deleted!
+```
+cd brewery-app
+npm start
+```
+ATTENTION: All the modules have to be properly installed before running the above commands.
 
-Flask comes with a built-in Web server that can be run in production (default) 
-or development mode supporting application debugging. The application can be
-run from the command line in debugging mode as follows.
 
-  cd LicenseManagement
-  . dev/debug_env
-  run
+## Author
 
-If to run in production mode, execute following commands instead.
-
-  cd LicenseManagement
-  . dev/prod_env
-  run
+* **Nikhil Raikar** - *Initial work* - [NikhilRaikar](https://gitlab.com/nikhilraikar88)
