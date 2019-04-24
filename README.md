@@ -28,7 +28,7 @@ Install this software as usual. Here is an example of installing it on Ubuntu.
 ## Project Structure
 
 The project follows and extends the folder structure as expected by Flask.
-
+```
   VacationTracker
   |-- LicenseManagement.py     # Main application file.
   |-- LicenseManagement.wsgi   # WSGI wrapper for Apache.
@@ -50,7 +50,7 @@ The project follows and extends the folder structure as expected by Flask.
       |-- images/              # Images and icons.
       |-- vendor/              # CSS and JavaScript frameworks.
   |-- venv/                  # Virtual Python environment.
-
+```
 
 ## Development and Debugging
 
