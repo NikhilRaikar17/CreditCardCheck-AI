@@ -20,9 +20,39 @@ This Web application requires the following software:
 ### Installing
 
 Install this software as usual. Here is an example of installing it on Ubuntu.
+
+For Create-react-app
 ```
-sudo apt-get install Create-react-app
+sudo apt-get install Create-react-app -g
 ```
+For Nodejs
+```
+sudo apt install nodejs
+```
+For Bootstrap
+```
+npm install bootstrap
+```
+For fontawesome
+```
+npm i --save @fortawesome/fontawesome-svg-core \
+npm i --save @fortawesome/free-solid-svg-icons \
+npm i --save @fortawesome/react-fontawesome
+```
+For ExpressJs
+```
+npm install -g express-generator
+```
+## Installed versions
+* Node - 10.15.3
+* Bootstrap - 4.3.1
+* Create-react-app - 1.4.3
+* @fortawesome/fontawesome-svg-core : 1.2.17
+* @fortawesome/free-solid-svg-icons : 5.8.1
+* @fortawesome/react-fontawesome -  0.1.4
+* Express-generator - 1.5.1
+* react-router-dom - 5.0.0
+
 ## Project Structure
 
 The project follows and extends the folder structure as expected by React.
